@@ -52,9 +52,9 @@ export const mockData = {
     surplus: 1950, // Available buffer
     recommended_investment: 100, // min(30% of 1950, 100) -> 100 per day max
     options: [
-      { name: "Digital Gold", description: "Safe, highly liquid micro-investment.", risk: "Low", minimum: 10 },
-      { name: "Micro Health Policy", description: "Cover ₹1 Lakh medical emergency.", risk: "None", minimum: 50 },
-      { name: "Liquid Mutual Fund", description: "Better returns than bank account.", risk: "Low", minimum: 100 }
+      { id: "gold", name: "Digital Gold", description: "Safe, highly liquid micro-investment.", risk: "Low", minimum: 10 },
+      { id: "health", name: "Micro Health Policy", description: "Cover ₹1 Lakh medical emergency.", risk: "None", minimum: 50 },
+      { id: "mutual-fund", name: "Liquid Mutual Fund", description: "Better returns than bank account.", risk: "Low", minimum: 100 }
     ]
   }
 };

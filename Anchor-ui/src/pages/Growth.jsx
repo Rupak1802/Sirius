@@ -1,9 +1,11 @@
 import { mockData } from '../data/mockData';
 import { useLanguage } from '../context/LanguageContext';
 import { TrendingUp, Award, Shield, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Growth() {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   
   // SRS Logic: Cap at 30% of surplus or 100/day
   const surplus = mockData.growth.surplus;
@@ -51,7 +53,11 @@ export default function Growth() {
           <h3 className="text-xl font-bold text-[var(--text-color)] mt-10 mb-6">Available Options</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {mockData.growth.options.map((opt, i) => (
-              <div key={i} className="glass-card p-6 border-blue-500/10 hover:border-blue-500/30 transition-all cursor-pointer group">
+              <div 
+                key={i} 
+                onClick={() => navigate(`/growth/${opt.id}`)}
+                className="glass-card p-6 border-blue-500/10 hover:border-blue-500/30 transition-all cursor-pointer group"
+              >
                 <div className="flex justify-between items-start mb-4">
                   <div className="p-3 bg-blue-500/10 text-blue-500 rounded-xl">
                     <Award size={24} />

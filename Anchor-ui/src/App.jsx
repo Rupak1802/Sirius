@@ -11,6 +11,7 @@ import Insights from './pages/Insights';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Growth from './pages/Growth';
+import AssetAnalysis from './pages/AssetAnalysis';
 import Report from './pages/Report';
 import Profile from './pages/Profile';
 import Platforms from './pages/Platforms';
@@ -47,6 +48,7 @@ function App() {
                 <Route path="/emergency" element={<Emergency />} />
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/growth" element={<Growth />} />
+                <Route path="/growth/:assetId" element={<AssetAnalysis />} />
                 <Route path="/report" element={<Report />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/platforms" element={<Platforms />} />
