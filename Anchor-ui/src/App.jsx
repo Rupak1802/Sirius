@@ -3,7 +3,11 @@ import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import Earnings from './pages/Earnings';
 import MoneyPlan from './pages/MoneyPlan';
-import './App.css';
+import Savings from './pages/Savings';
+import FinancialWeather from './pages/FinancialWeather';
+import WhatIf from './pages/WhatIf';
+import Emergency from './pages/Emergency';
+import Insights from './pages/Insights';
 
 function App() {
   return (
@@ -13,7 +17,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/earnings" element={<Earnings />} />
           <Route path="/plan" element={<MoneyPlan />} />
-          {/* Add more routes here as needed for the hackathon demo */}
+          <Route path="/savings" element={<Savings />} />
+          <Route path="/weather" element={<FinancialWeather />} />
+          <Route path="/whatif" element={<WhatIf />} />
+          <Route path="/emergency" element={<Emergency />} />
+          <Route path="/insights" element={<Insights />} />
         </Route>
       </Routes>
     </BrowserRouter>

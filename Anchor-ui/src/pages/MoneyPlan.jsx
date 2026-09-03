@@ -1,66 +1,73 @@
+import VoiceButton from '../components/ui/VoiceButton';
+
 export default function MoneyPlan() {
   return (
     <div className="space-y-6 pb-20">
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-slate-800">Your Weekly Money Plan</h1>
-        <p className="text-slate-500">We divided your expected income into what matters first.</p>
+      <div className="flex justify-between items-end mb-8">
+        <div>
+          <h1 className="text-3xl font-bold text-white tracking-tight">Your Weekly Money Plan</h1>
+          <p className="text-slate-400 mt-1">We divided your expected income into what matters first.</p>
+        </div>
+        <VoiceButton text="Your expected income is ₹5,200. I have allocated ₹2,000 for essentials and ₹700 for savings." />
       </div>
 
       <div className="glass-card p-6 md:p-8">
-        <p className="text-slate-500 font-medium mb-1">Expected income</p>
-        <h2 className="text-4xl font-black text-slate-800 tracking-tight mb-8">₹5,200</h2>
+        <p className="text-blue-300 font-medium mb-1 text-sm uppercase tracking-wider">Expected income</p>
+        <h2 className="text-5xl font-black text-white tracking-tight mb-8 drop-shadow-md">₹5,200</h2>
         
         {/* Horizontal allocation bar */}
-        <div className="w-full h-6 rounded-full overflow-hidden flex mb-6">
-          <div className="bg-red-500 h-full" style={{ width: '38%' }} title="Essentials"></div>
-          <div className="bg-orange-400 h-full" style={{ width: '15%' }} title="Work expenses"></div>
-          <div className="bg-emerald-500 h-full" style={{ width: '14%' }} title="Savings"></div>
-          <div className="bg-teal-400 h-full" style={{ width: '10%' }} title="Emergency"></div>
-          <div className="bg-blue-400 h-full" style={{ width: '23%' }} title="Flexible"></div>
+        <div className="w-full h-8 rounded-xl overflow-hidden flex mb-8 shadow-inner border border-white/10">
+          <div className="bg-red-500 hover:bg-red-400 transition-colors cursor-pointer h-full" style={{ width: '38%' }} title="Essentials"></div>
+          <div className="bg-orange-500 hover:bg-orange-400 transition-colors cursor-pointer h-full" style={{ width: '15%' }} title="Work expenses"></div>
+          <div className="bg-emerald-500 hover:bg-emerald-400 transition-colors cursor-pointer h-full" style={{ width: '14%' }} title="Savings"></div>
+          <div className="bg-teal-500 hover:bg-teal-400 transition-colors cursor-pointer h-full" style={{ width: '10%' }} title="Emergency"></div>
+          <div className="bg-blue-500 hover:bg-blue-400 transition-colors cursor-pointer h-full" style={{ width: '23%' }} title="Flexible"></div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">
-          <div><div className="w-3 h-3 bg-red-500 rounded-full mb-1 inline-block mr-1"></div><span className="text-slate-600">Essentials</span><p className="font-bold">₹2,000</p></div>
-          <div><div className="w-3 h-3 bg-orange-400 rounded-full mb-1 inline-block mr-1"></div><span className="text-slate-600">Work</span><p className="font-bold">₹800</p></div>
-          <div><div className="w-3 h-3 bg-emerald-500 rounded-full mb-1 inline-block mr-1"></div><span className="text-slate-600">Savings</span><p className="font-bold">₹700</p></div>
-          <div><div className="w-3 h-3 bg-teal-400 rounded-full mb-1 inline-block mr-1"></div><span className="text-slate-600">Emergency</span><p className="font-bold">₹500</p></div>
-          <div><div className="w-3 h-3 bg-blue-400 rounded-full mb-1 inline-block mr-1"></div><span className="text-slate-600">Flexible</span><p className="font-bold">₹1,200</p></div>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-sm">
+          <div><div className="w-4 h-4 bg-red-500 rounded-md mb-2 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div><span className="text-slate-400 block mb-1">Essentials</span><p className="font-bold text-white text-lg">₹2,000</p></div>
+          <div><div className="w-4 h-4 bg-orange-500 rounded-md mb-2 shadow-[0_0_10px_rgba(249,115,22,0.5)]"></div><span className="text-slate-400 block mb-1">Work</span><p className="font-bold text-white text-lg">₹800</p></div>
+          <div><div className="w-4 h-4 bg-emerald-500 rounded-md mb-2 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div><span className="text-slate-400 block mb-1">Savings</span><p className="font-bold text-white text-lg">₹700</p></div>
+          <div><div className="w-4 h-4 bg-teal-500 rounded-md mb-2 shadow-[0_0_10px_rgba(20,184,166,0.5)]"></div><span className="text-slate-400 block mb-1">Emergency</span><p className="font-bold text-white text-lg">₹500</p></div>
+          <div><div className="w-4 h-4 bg-blue-500 rounded-md mb-2 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div><span className="text-slate-400 block mb-1">Flexible</span><p className="font-bold text-white text-lg">₹1,200</p></div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-        <PriorityCard title="Must Protect" items={['Rent', 'Fuel', 'Food', 'Phone']} color="border-red-200 bg-red-50" dot="bg-red-500" />
-        <PriorityCard title="Should Save" items={['Emergency reserve', 'Short-term savings']} color="border-emerald-200 bg-emerald-50" dot="bg-emerald-500" />
-        <PriorityCard title="Flexible" items={['Shopping', 'Entertainment', 'Dining']} color="border-blue-200 bg-blue-50" dot="bg-blue-500" />
+        <PriorityCard title="Must Protect" items={['Rent', 'Fuel', 'Food', 'Phone']} color="border-red-500/30 bg-red-500/10" dot="bg-red-500" />
+        <PriorityCard title="Should Save" items={['Emergency reserve', 'Short-term savings']} color="border-emerald-500/30 bg-emerald-500/10" dot="bg-emerald-500" />
+        <PriorityCard title="Flexible" items={['Shopping', 'Entertainment', 'Dining']} color="border-blue-500/30 bg-blue-500/10" dot="bg-blue-500" />
       </div>
 
-      <div className="glass-card p-6 md:p-8 mt-8 border-l-4 border-l-blue-500">
-        <h3 className="text-xl font-bold text-slate-800 mb-6">Your plan changes with your income</h3>
+      <div className="glass-card p-6 md:p-8 mt-8 border-l-4 border-l-blue-500 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full mix-blend-screen filter blur-[60px] translate-x-1/2 -translate-y-1/2"></div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 relative">
-            <div className="absolute top-0 right-0 bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-1 rounded-bl-lg rounded-tr-xl">Good Week</div>
-            <p className="text-sm text-slate-500 mb-1">Last week</p>
-            <p className="font-bold text-lg mb-3">Income: ₹5,200</p>
-            <div className="flex justify-between items-center bg-white p-3 rounded-xl border border-slate-100">
-              <span className="font-medium text-slate-600">Savings</span>
-              <span className="font-bold text-emerald-600 text-lg">₹700</span>
+        <h3 className="text-2xl font-bold text-white mb-8 relative z-10">Your plan changes with your income</h3>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+          <div className="bg-white/5 p-6 rounded-2xl border border-emerald-500/30 relative shadow-[0_0_20px_rgba(16,185,129,0.1)]">
+            <div className="absolute top-0 right-0 bg-emerald-500 text-white text-xs font-bold px-3 py-1.5 rounded-bl-xl rounded-tr-2xl tracking-wider uppercase">Good Week</div>
+            <p className="text-sm text-slate-400 mb-1">Last week</p>
+            <p className="font-bold text-white text-xl mb-6">Income: ₹5,200</p>
+            <div className="flex justify-between items-center bg-black/40 p-4 rounded-xl border border-white/5">
+              <span className="font-medium text-slate-300">Savings</span>
+              <span className="font-black text-emerald-400 text-2xl">₹700</span>
             </div>
           </div>
           
-          <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 relative">
-            <div className="absolute top-0 right-0 bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded-bl-lg rounded-tr-xl">Difficult Week</div>
-            <p className="text-sm text-slate-500 mb-1">This week</p>
-            <p className="font-bold text-lg mb-3">Income: ₹3,400</p>
-            <div className="flex justify-between items-center bg-white p-3 rounded-xl border border-slate-100">
-              <span className="font-medium text-slate-600">Savings</span>
-              <span className="font-bold text-slate-800 text-lg">₹250</span>
+          <div className="bg-white/5 p-6 rounded-2xl border border-red-500/30 relative shadow-[0_0_20px_rgba(239,68,68,0.1)]">
+            <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-3 py-1.5 rounded-bl-xl rounded-tr-2xl tracking-wider uppercase">Difficult Week</div>
+            <p className="text-sm text-slate-400 mb-1">This week</p>
+            <p className="font-bold text-white text-xl mb-6">Income: ₹3,400</p>
+            <div className="flex justify-between items-center bg-black/40 p-4 rounded-xl border border-white/5">
+              <span className="font-medium text-slate-300">Savings</span>
+              <span className="font-black text-white text-2xl">₹250</span>
             </div>
           </div>
         </div>
 
-        <p className="text-slate-500 mt-6 leading-relaxed bg-blue-50 p-4 rounded-xl text-sm border border-blue-100">
-          <strong>Mitra reduces your savings target</strong> when income falls so you don't have to sacrifice essentials.
+        <p className="text-slate-300 mt-8 leading-relaxed bg-blue-900/30 p-5 rounded-xl border border-blue-500/20 relative z-10">
+          <strong className="text-white">Mitra reduces your savings target</strong> when income falls so you don't have to sacrifice essentials.
         </p>
       </div>
     </div>
@@ -69,14 +76,14 @@ export default function MoneyPlan() {
 
 function PriorityCard({ title, items, color, dot }) {
   return (
-    <div className={`p-5 rounded-2xl border ${color}`}>
-      <div className="flex items-center gap-2 mb-4">
-        <div className={`w-3 h-3 rounded-full ${dot}`}></div>
-        <h3 className="font-bold text-slate-800">{title}</h3>
+    <div className={`p-6 rounded-2xl border ${color} relative overflow-hidden backdrop-blur-sm`}>
+      <div className="flex items-center gap-3 mb-6">
+        <div className={`w-4 h-4 rounded-md ${dot} shadow-[0_0_10px_currentColor]`}></div>
+        <h3 className="font-bold text-white text-lg">{title}</h3>
       </div>
-      <ul className="space-y-2">
+      <ul className="space-y-3">
         {items.map((item, i) => (
-          <li key={i} className="text-slate-700 font-medium text-sm bg-white/60 px-3 py-2 rounded-lg">{item}</li>
+          <li key={i} className="text-slate-300 font-medium text-sm bg-black/20 border border-white/5 px-4 py-2.5 rounded-xl">{item}</li>
         ))}
       </ul>
     </div>
