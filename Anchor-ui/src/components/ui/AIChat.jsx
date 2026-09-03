@@ -57,16 +57,16 @@ export default function AIChat() {
         <div className="bg-blue-600/20 backdrop-blur-md border-b border-white/10 p-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
-              <Bot size={18} className="text-white" />
+              <Bot size={18} className="text-[var(--text-color)]" />
             </div>
             <div>
-              <h3 className="font-bold text-white text-sm">Mitra AI Coach</h3>
+              <h3 className="font-bold text-[var(--text-color)] text-sm">Mitra AI Coach</h3>
               <p className="text-xs text-blue-200">Online & Ready</p>
             </div>
           </div>
           <button 
             onClick={() => setIsOpen(false)}
-            className="text-white/50 hover:text-white transition-colors p-1 rounded-md hover:bg-white/10"
+            className="text-[var(--text-color)]/50 hover:text-[var(--text-color)] transition-colors p-1 rounded-md hover:bg-white/10"
           >
             <X size={20} />
           </button>
@@ -96,7 +96,7 @@ export default function AIChat() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask Mitra for advice..." 
-              className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-500/50 transition-colors"
+              className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-sm text-[var(--text-color)] placeholder-slate-400 focus:outline-none focus:border-blue-500/50 transition-colors"
             />
             <button 
               type="submit"

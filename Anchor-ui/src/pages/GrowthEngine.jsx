@@ -6,16 +6,16 @@ export default function GrowthEngine() {
     <div className="space-y-8 max-w-4xl mx-auto">
       <div>
         <h1 className="text-3xl font-bold tracking-tight mb-2">Growth Engine</h1>
-        <p className="text-white/70 max-w-2xl">
+        <p className="text-[var(--text-color)]/70 max-w-2xl">
           Growth without risk: surplus only, never essentials. Automatically invests spare money left after rent, fuel, and goals are covered.
         </p>
       </div>
 
       <GlassCard className="text-center py-8 relative overflow-hidden border-blue-500/20 bg-blue-900/10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent"></div>
-        <h2 className="text-xl font-medium text-white/80 mb-2">Today's Surplus</h2>
+        <h2 className="text-xl font-medium text-[var(--text-color)]/80 mb-2">Today's Surplus</h2>
         <p className="text-6xl font-black text-blue-300">₹117</p>
-        <p className="text-white/50 text-sm mt-4">Protected: ₹200 (Rent/Fuel) + ₹50 (Savings Goal)</p>
+        <p className="text-[var(--text-color)]/50 text-sm mt-4">Protected: ₹200 (Rent/Fuel) + ₹50 (Savings Goal)</p>
       </GlassCard>
 
       <div className="space-y-4">
@@ -28,7 +28,7 @@ export default function GrowthEngine() {
             </div>
             <div>
               <h4 className="font-bold text-lg">Digital Gold</h4>
-              <p className="text-white/50 text-sm">Most liquid, easy to understand</p>
+              <p className="text-[var(--text-color)]/50 text-sm">Most liquid, easy to understand</p>
             </div>
           </div>
           <div className="text-right">
@@ -46,12 +46,12 @@ export default function GrowthEngine() {
             </div>
             <div>
               <h4 className="font-bold text-lg">Liquid Mutual Fund</h4>
-              <p className="text-white/50 text-sm">Modest step up</p>
+              <p className="text-[var(--text-color)]/50 text-sm">Modest step up</p>
             </div>
           </div>
           <div className="text-right">
             <p className="text-xl font-bold">₹0</p>
-            <p className="text-xs text-white/40 mt-1">Buffer &lt; 14 days</p>
+            <p className="text-xs text-[var(--text-color)]/40 mt-1">Buffer &lt; 14 days</p>
           </div>
         </GlassCard>
       </div>

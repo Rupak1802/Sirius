@@ -33,7 +33,7 @@ export default function Demo() {
     <div className="space-y-6 max-w-3xl mx-auto">
       <div>
         <h1 className="text-3xl font-bold tracking-tight mb-2">Live Demo</h1>
-        <p className="text-white/70">
+        <p className="text-[var(--text-color)]/70">
           Stress-test the buffer in real time. Pull earnings down and watch ANCHOR move to protect funds.
         </p>
       </div>
@@ -50,7 +50,7 @@ export default function Demo() {
               <Activity className="text-blue-400" />
               Simulated Daily Earnings
             </label>
-            <span className="text-3xl font-black text-white">₹{earnings}</span>
+            <span className="text-3xl font-black text-[var(--text-color)]">₹{earnings}</span>
           </div>
           
           <input 
@@ -62,7 +62,7 @@ export default function Demo() {
             onChange={(e) => setEarnings(parseInt(e.target.value))}
             className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-blue-500"
           />
-          <div className="flex justify-between text-xs text-white/50 mt-2 font-medium">
+          <div className="flex justify-between text-xs text-[var(--text-color)]/50 mt-2 font-medium">
             <span>₹0 (Shock)</span>
             <span>₹1000 (Fragile)</span>
             <span>₹2000 (Stable)</span>
@@ -81,7 +81,7 @@ export default function Demo() {
           </div>
           
           <div className="bg-black/30 p-4 rounded-xl border border-white/5 mt-4">
-            <p className="text-white/90 text-lg leading-relaxed">{message}</p>
+            <p className="text-[var(--text-color)]/90 text-lg leading-relaxed">{message}</p>
           </div>
         </div>
       </GlassCard>

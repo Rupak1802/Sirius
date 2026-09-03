@@ -6,7 +6,7 @@ export default function Earnings() {
     <div className="space-y-6 pb-20">
       <div className="flex justify-between items-end mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-white tracking-tight">Your Earnings</h1>
+          <h1 className="text-3xl font-bold text-[var(--text-color)] tracking-tight">Your Earnings</h1>
           <p className="text-slate-400 mt-1">See where your money is really coming from.</p>
         </div>
         <VoiceButton text="You earned ₹5,620 this week. Swiggy is your most profitable platform after accounting for fuel costs." />
@@ -14,7 +14,7 @@ export default function Earnings() {
 
       <div className="glass-card p-6 md:p-8">
         <p className="text-blue-300 font-medium mb-1 text-sm uppercase tracking-wider">Total this week</p>
-        <h2 className="text-5xl font-black text-white tracking-tight mb-8 drop-shadow-md">₹5,620</h2>
+        <h2 className="text-5xl font-black text-[var(--text-color)] tracking-tight mb-8 drop-shadow-md">₹5,620</h2>
         
         {/* Simple mock bar chart */}
         <div className="flex items-end justify-between h-40 mt-8 mb-2 gap-2 md:gap-4">
@@ -40,7 +40,7 @@ export default function Earnings() {
         </div>
       </div>
 
-      <h3 className="text-xl font-bold text-white mt-8 mb-4">Platform comparison</h3>
+      <h3 className="text-xl font-bold text-[var(--text-color)] mt-8 mb-4">Platform comparison</h3>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <PlatformCard name="Swiggy" color="bg-orange-500" gross={3200} cost={600} />
@@ -49,7 +49,7 @@ export default function Earnings() {
       </div>
 
       <div className="glass-card p-6 md:p-8 mt-8">
-        <h3 className="font-bold text-white mb-6 text-xl">Income sources</h3>
+        <h3 className="font-bold text-[var(--text-color)] mb-6 text-xl">Income sources</h3>
         <div className="space-y-6">
           <SourceRow name="Platform income" percent={70} color="bg-blue-500" />
           <SourceRow name="Cash" percent={20} color="bg-emerald-500" />
@@ -67,13 +67,13 @@ function PlatformCard({ name, color, gross, cost }) {
       <div className={`absolute top-0 right-0 w-24 h-24 ${color} opacity-20 rounded-full translate-x-1/2 -translate-y-1/2 blur-2xl transition-transform group-hover:scale-150`}></div>
       <div className="flex items-center gap-3 mb-6 relative z-10">
         <div className={`w-4 h-4 rounded-full ${color} shadow-[0_0_10px_currentColor]`}></div>
-        <h4 className="font-bold text-white text-lg">{name}</h4>
+        <h4 className="font-bold text-[var(--text-color)] text-lg">{name}</h4>
       </div>
       
       <div className="space-y-3 text-sm mb-2 relative z-10">
         <div className="flex justify-between">
           <span className="text-slate-400">Gross</span>
-          <span className="font-medium text-white">₹{gross}</span>
+          <span className="font-medium text-[var(--text-color)]">₹{gross}</span>
         </div>
         <div className="flex justify-between border-b border-white/10 pb-3">
           <span className="text-slate-400">Work costs</span>
@@ -93,7 +93,7 @@ function SourceRow({ name, percent, color }) {
     <div>
       <div className="flex justify-between text-sm mb-2">
         <span className="font-medium text-slate-300">{name}</span>
-        <span className="font-bold text-white">{percent}%</span>
+        <span className="font-bold text-[var(--text-color)]">{percent}%</span>
       </div>
       <div className="w-full bg-white/10 rounded-full h-3 border border-white/5">
         <div className={`${color} h-3 rounded-full shadow-[0_0_10px_currentColor]`} style={{ width: `${percent}%` }}></div>

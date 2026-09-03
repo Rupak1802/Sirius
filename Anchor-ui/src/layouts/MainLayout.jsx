@@ -18,9 +18,9 @@ export default function MainLayout() {
       <aside className="w-64 glass-panel hidden md:flex flex-col sticky top-0 h-screen z-10">
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg border border-white/20">M</div>
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-[var(--text-color)] shadow-lg border border-white/20">M</div>
             <div>
-              <h1 className="font-bold text-xl text-white tracking-wide">Mitra</h1>
+              <h1 className="font-bold text-xl text-[var(--text-color)] tracking-wide">Mitra</h1>
               <p className="text-[10px] text-blue-300 font-bold tracking-widest uppercase">Financial Co-Pilot</p>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function MainLayout() {
           <div className="flex items-center gap-3 px-2">
             <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Rahul" alt="Rahul" className="w-10 h-10 rounded-full bg-blue-900/50 border border-white/20" />
             <div>
-              <p className="font-bold text-sm text-white">Rahul Sharma</p>
+              <p className="font-bold text-sm text-[var(--text-color)]">Rahul Sharma</p>
               <p className="text-xs text-slate-400">Delivery Partner</p>
             </div>
           </div>
@@ -69,8 +69,8 @@ export default function MainLayout() {
         {/* Mobile Header */}
         <header className="md:hidden glass-panel border-b border-white/10 p-4 sticky top-0 z-20 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-white border border-white/20">M</div>
-            <h1 className="font-bold text-lg text-white">Mitra</h1>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-[var(--text-color)] border border-white/20">M</div>
+            <h1 className="font-bold text-lg text-[var(--text-color)]">Mitra</h1>
           </div>
           <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Rahul" alt="Rahul" className="w-8 h-8 rounded-full bg-blue-900/50 border border-white/20" />
         </header>

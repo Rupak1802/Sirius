@@ -11,13 +11,13 @@ export default function PlanningEngine() {
     <div className="space-y-6 max-w-4xl mx-auto">
       <div>
         <h1 className="text-3xl font-bold tracking-tight mb-2">Planning Engine</h1>
-        <p className="text-white/70 max-w-2xl">
+        <p className="text-[var(--text-color)]/70 max-w-2xl">
           Plan before the shock happens. Simulate missed days and get a concrete recovery plan.
         </p>
       </div>
 
       <GlassCard className="border-blue-500/20 bg-blue-900/10">
-        <label className="block mb-4 font-medium text-lg text-white">What if I don't work for...</label>
+        <label className="block mb-4 font-medium text-lg text-[var(--text-color)]">What if I don't work for...</label>
         <div className="flex flex-col sm:flex-row gap-4 items-center">
           <div className="flex items-center gap-3 w-full sm:w-auto">
             <GlassInput 
@@ -27,7 +27,7 @@ export default function PlanningEngine() {
               className="w-24 text-center font-bold text-xl"
               min="1"
             />
-            <span className="text-xl font-medium text-white/80">days?</span>
+            <span className="text-xl font-medium text-[var(--text-color)]/80">days?</span>
           </div>
           <GlassButton variant="primary" className="w-full sm:w-auto sm:ml-auto">
             Simulate Future
@@ -45,38 +45,38 @@ export default function PlanningEngine() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
           <div className="bg-black/20 p-4 rounded-xl border border-white/5">
-            <div className="flex items-center gap-2 text-white/50 mb-1">
+            <div className="flex items-center gap-2 text-[var(--text-color)]/50 mb-1">
               <TrendingDown size={16} />
               <p className="text-sm">Estimated Income Loss</p>
             </div>
-            <p className="text-3xl font-black text-white">₹{days * 192}</p>
+            <p className="text-3xl font-black text-[var(--text-color)]">₹{days * 192}</p>
           </div>
           <div className="bg-black/20 p-4 rounded-xl border border-white/5">
-            <div className="flex items-center gap-2 text-white/50 mb-1">
+            <div className="flex items-center gap-2 text-[var(--text-color)]/50 mb-1">
               <Target size={16} />
               <p className="text-sm">Goal Delay</p>
             </div>
-            <p className="text-3xl font-black text-white">{Math.ceil(days * 1.2)} days</p>
+            <p className="text-3xl font-black text-[var(--text-color)]">{Math.ceil(days * 1.2)} days</p>
           </div>
         </div>
 
         <div className="flex items-center gap-2 mb-4">
           <Map className="text-blue-300" size={20} />
-          <h3 className="font-bold text-xl text-white">Recovery Plan</h3>
+          <h3 className="font-bold text-xl text-[var(--text-color)]">Recovery Plan</h3>
         </div>
         
         <div className="space-y-3">
           <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
             <div className="w-6 h-6 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</div>
-            <p className="text-white/80">Work <span className="font-bold text-white">~7 extra hours</span> over the next week to fully recover.</p>
+            <p className="text-[var(--text-color)]/80">Work <span className="font-bold text-[var(--text-color)]">~7 extra hours</span> over the next week to fully recover.</p>
           </div>
           <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
             <div className="w-6 h-6 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</div>
-            <p className="text-white/80">Or switch to a higher-paying platform for <span className="font-bold text-white">{days} days</span> after returning.</p>
+            <p className="text-[var(--text-color)]/80">Or switch to a higher-paying platform for <span className="font-bold text-[var(--text-color)]">{days} days</span> after returning.</p>
           </div>
           <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
             <div className="w-6 h-6 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</div>
-            <p className="text-white/80">Reduce discretionary spending by <span className="font-bold text-white">₹384</span> to offset the gap.</p>
+            <p className="text-[var(--text-color)]/80">Reduce discretionary spending by <span className="font-bold text-[var(--text-color)]">₹384</span> to offset the gap.</p>
           </div>
         </div>
         

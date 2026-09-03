@@ -6,7 +6,7 @@ export default function Insights() {
     <div className="space-y-6 pb-20">
       <div className="flex justify-between items-end mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-white tracking-tight">AI Insights</h1>
+          <h1 className="text-3xl font-bold text-[var(--text-color)] tracking-tight">AI Insights</h1>
           <p className="text-slate-400 mt-1">Mitra analyzes your earnings to find hidden opportunities.</p>
         </div>
         <VoiceButton text="Insight. Working Friday evenings on Swiggy yields 30% more profit than Sunday mornings." />
@@ -19,11 +19,11 @@ export default function Insights() {
           <div className="p-3 bg-purple-500/20 text-purple-400 rounded-xl border border-purple-500/30">
             <Lightbulb size={28} className="drop-shadow-[0_0_15px_rgba(168,85,247,0.8)]" />
           </div>
-          <h2 className="text-2xl font-bold text-white">Top Discovery</h2>
+          <h2 className="text-2xl font-bold text-[var(--text-color)]">Top Discovery</h2>
         </div>
         
         <p className="text-xl text-purple-100/90 font-medium leading-relaxed mb-6 relative z-10">
-          You are currently averaging <span className="text-white font-bold bg-purple-500/20 px-2 py-0.5 rounded">₹120/hr</span> on Zomato during weekday lunches, but your historical data shows you made <span className="text-white font-bold bg-emerald-500/20 px-2 py-0.5 rounded text-emerald-400">₹180/hr</span> doing grocery delivery (Instamart) during the same time slot last month.
+          You are currently averaging <span className="text-[var(--text-color)] font-bold bg-purple-500/20 px-2 py-0.5 rounded">₹120/hr</span> on Zomato during weekday lunches, but your historical data shows you made <span className="text-[var(--text-color)] font-bold bg-emerald-500/20 px-2 py-0.5 rounded text-emerald-400">₹180/hr</span> doing grocery delivery (Instamart) during the same time slot last month.
         </p>
         
         <button className="bg-purple-600 hover:bg-purple-500 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] relative z-10">
@@ -34,7 +34,7 @@ export default function Insights() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         <div className="glass-card p-6 border-white/5">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="font-bold text-white text-lg flex items-center gap-2">
+            <h3 className="font-bold text-[var(--text-color)] text-lg flex items-center gap-2">
               <TrendingUp className="text-emerald-400" /> Income Velocity
             </h3>
           </div>
@@ -53,7 +53,7 @@ export default function Insights() {
 
         <div className="glass-card p-6 border-white/5">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="font-bold text-white text-lg flex items-center gap-2">
+            <h3 className="font-bold text-[var(--text-color)] text-lg flex items-center gap-2">
               <BarChart2 className="text-blue-400" /> Expense Leaks
             </h3>
           </div>
@@ -61,14 +61,14 @@ export default function Insights() {
           <div className="space-y-4">
             <div className="flex items-center justify-between bg-black/20 p-4 rounded-xl border border-white/5">
               <div>
-                <p className="text-white font-medium">Idle Fuel Burn</p>
+                <p className="text-[var(--text-color)] font-medium">Idle Fuel Burn</p>
                 <p className="text-slate-400 text-xs mt-1">Waiting between orders</p>
               </div>
               <p className="text-red-400 font-bold">-₹140</p>
             </div>
             <div className="flex items-center justify-between bg-black/20 p-4 rounded-xl border border-white/5">
               <div>
-                <p className="text-white font-medium">Bank Transfer Fees</p>
+                <p className="text-[var(--text-color)] font-medium">Bank Transfer Fees</p>
                 <p className="text-slate-400 text-xs mt-1">Instant withdrawal costs</p>
               </div>
               <p className="text-red-400 font-bold">-₹45</p>

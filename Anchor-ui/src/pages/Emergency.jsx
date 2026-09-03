@@ -6,7 +6,7 @@ export default function Emergency() {
     <div className="space-y-6 pb-20">
       <div className="flex justify-between items-end mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-white tracking-tight">Emergency Protocol</h1>
+          <h1 className="text-3xl font-bold text-[var(--text-color)] tracking-tight">Emergency Protocol</h1>
           <p className="text-slate-400 mt-1">Immediate actions for when income stops.</p>
         </div>
         <VoiceButton text="Emergency protocol. If your buffer hits zero, you can access your emergency reserve or request a payout gap advance." />
@@ -36,7 +36,7 @@ export default function Emergency() {
         <div className="glass-card p-6 border-orange-500/20 bg-orange-950/20 hover:border-orange-500/40 transition-colors">
           <div className="flex items-center gap-3 mb-4">
             <IndianRupee className="text-orange-400" />
-            <h3 className="font-bold text-white text-lg">Payout Gap Protection</h3>
+            <h3 className="font-bold text-[var(--text-color)] text-lg">Payout Gap Protection</h3>
           </div>
           <p className="text-slate-400 mb-6 text-sm">Access up to ₹2,000 of next week's projected earnings today for a flat ₹20 fee.</p>
           <button className="w-full py-3 rounded-xl border border-orange-500/30 text-orange-400 font-semibold hover:bg-orange-500/10 transition-colors">
@@ -47,7 +47,7 @@ export default function Emergency() {
         <div className="glass-card p-6 border-slate-700 hover:border-slate-500 transition-colors">
           <div className="flex items-center gap-3 mb-4">
             <AlertCircle className="text-slate-300" />
-            <h3 className="font-bold text-white text-lg">Report Accident/Issue</h3>
+            <h3 className="font-bold text-[var(--text-color)] text-lg">Report Accident/Issue</h3>
           </div>
           <p className="text-slate-400 mb-6 text-sm">Notify Mitra that you cannot work. We will pause your savings targets and recalculate your timeline.</p>
           <button className="w-full py-3 rounded-xl border border-slate-600 text-slate-300 font-semibold hover:bg-white/5 transition-colors">
@@ -58,7 +58,7 @@ export default function Emergency() {
 
       <div className="mt-8 p-6 rounded-2xl bg-black/40 border border-white/5 flex items-center justify-between">
         <div>
-          <h4 className="font-bold text-white mb-1">Need human help?</h4>
+          <h4 className="font-bold text-[var(--text-color)] mb-1">Need human help?</h4>
           <p className="text-slate-400 text-sm">Talk to a financial counselor for free.</p>
         </div>
         <button className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-xl font-medium transition-colors">
