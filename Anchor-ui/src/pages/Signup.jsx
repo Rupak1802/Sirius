@@ -26,7 +26,7 @@ export default function Signup() {
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-blue-600 flex items-center justify-center font-bold text-[var(--text-color)] shadow-[0_0_20px_rgba(16,185,129,0.5)] mb-4">
             <Shield size={32} />
           </div>
-          <h2 className="text-3xl font-black text-[var(--text-color)]">Join Mitra</h2>
+          <h2 className="text-3xl font-black text-[var(--text-color)]">Join Flint</h2>
           <p className="text-slate-400 mt-2">Start protecting your income today</p>
         </div>
 

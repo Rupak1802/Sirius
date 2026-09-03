@@ -109,7 +109,7 @@ export default function MoneyPlan() {
         <div className="mt-8 bg-blue-500/10 border border-blue-500/20 p-5 rounded-2xl flex items-start gap-4">
           <div className="text-blue-500 bg-blue-500/20 p-2 rounded-lg shrink-0 mt-0.5"><Activity size={20} /></div>
           <p className="text-[var(--text-muted)] text-sm leading-relaxed">
-            <strong className="text-[var(--text-color)]">Mitra reduces your savings target</strong> when income falls so you don't have to sacrifice essentials. Your rent and fuel are always protected first.
+            <strong className="text-[var(--text-color)]">Flint reduces your savings target</strong> when income falls so you don't have to sacrifice essentials. Your rent and fuel are always protected first.
           </p>
         </div>
       </div>

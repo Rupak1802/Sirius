@@ -6,7 +6,7 @@ export default function AIChat() {
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { id: 1, text: "Hi! I'm Mitra, your financial assistant. How can I help you today?", sender: 'ai' }
+    { id: 1, text: "Hi! I'm Flint, your financial assistant. How can I help you today?", sender: 'ai' }
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -85,7 +85,7 @@ export default function AIChat() {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 flex justify-between items-center text-white shrink-0">
             <div className="flex items-center gap-2">
               <div className="bg-white/20 p-1.5 rounded-lg"><Bot size={20} /></div>
-              <h3 className="font-bold">Mitra Assistant</h3>
+              <h3 className="font-bold">Flint Assistant</h3>
             </div>
             <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-1.5 rounded-lg transition-colors">
               <X size={18} />
@@ -109,7 +109,7 @@ export default function AIChat() {
               <div className="flex justify-start">
                 <div className="p-3 rounded-2xl max-w-[85%] bg-white dark:bg-white/10 text-[var(--text-color)] border border-[var(--card-border)] rounded-tl-none shadow-sm flex items-center gap-2">
                   <Loader2 size={16} className="animate-spin text-blue-500" />
-                  <span className="text-xs text-[var(--text-muted)]">Mitra is thinking...</span>
+                  <span className="text-xs text-[var(--text-muted)]">Flint is thinking...</span>
                 </div>
               </div>
             )}
@@ -137,7 +137,7 @@ export default function AIChat() {
                   type="text" 
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder={isRecording ? "Listening..." : "Message Mitra..."}
+                  placeholder={isRecording ? "Listening..." : "Message Flint..."}
                   disabled={isRecording}
                   className="w-full bg-black/5 dark:bg-white/5 border border-[var(--card-border)] rounded-xl py-2 pl-3 pr-10 text-[var(--text-color)] text-sm focus:outline-none focus:border-blue-500 transition-colors"
                 />

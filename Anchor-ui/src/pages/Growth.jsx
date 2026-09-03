@@ -27,7 +27,7 @@ export default function Growth() {
         <div className="glass-card p-8 border-red-500/30 bg-red-900/10 text-center">
           <Shield className="mx-auto text-red-500 mb-4" size={48} />
           <h2 className="text-2xl font-bold text-[var(--text-color)] mb-2">Growth Paused</h2>
-          <p className="text-[var(--text-muted)] max-w-md mx-auto">Your financial state is currently tight. Mitra has automatically paused your investments so you have cash for your essentials.</p>
+          <p className="text-[var(--text-muted)] max-w-md mx-auto">Your financial state is currently tight. Flint has automatically paused your investments so you have cash for your essentials.</p>
         </div>
       ) : (
         <>
@@ -36,7 +36,7 @@ export default function Growth() {
             
             <div className="flex items-center gap-3 mb-6 relative z-10">
               <TrendingUp className="text-emerald-500" size={32} />
-              <h2 className="text-2xl font-bold text-[var(--text-color)]">Mitra AI Recommendation</h2>
+              <h2 className="text-2xl font-bold text-[var(--text-color)]">Flint AI Recommendation</h2>
             </div>
             
             <p className="text-[var(--text-muted)] mb-8 text-lg relative z-10">

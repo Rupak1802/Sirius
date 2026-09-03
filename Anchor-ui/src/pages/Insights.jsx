@@ -85,11 +85,11 @@ export default function Insights() {
           <div className="flex flex-col gap-3">
             <div className="flex items-start gap-3 bg-black/10 dark:bg-white/5 p-3 rounded-xl">
               <Shield className="text-blue-500 shrink-0 mt-0.5" size={18} />
-              <p className="text-sm text-[var(--text-muted)]"><strong className="text-[var(--text-color)]">Mitra Fix:</strong> Optimize your delivery routes. We recommend rejecting orders over 8km unless surge is active.</p>
+              <p className="text-sm text-[var(--text-muted)]"><strong className="text-[var(--text-color)]">Flint Fix:</strong> Optimize your delivery routes. We recommend rejecting orders over 8km unless surge is active.</p>
             </div>
             <div className="flex items-start gap-3 bg-black/10 dark:bg-white/5 p-3 rounded-xl">
               <Shield className="text-blue-500 shrink-0 mt-0.5" size={18} />
-              <p className="text-sm text-[var(--text-muted)]"><strong className="text-[var(--text-color)]">Mitra Fix:</strong> Check tire pressure weekly; poor pressure reduces mileage by up to 10%.</p>
+              <p className="text-sm text-[var(--text-muted)]"><strong className="text-[var(--text-color)]">Flint Fix:</strong> Check tire pressure weekly; poor pressure reduces mileage by up to 10%.</p>
             </div>
           </div>
         </div>

@@ -41,7 +41,7 @@ export default function Profile() {
             </p>
             <div className="mt-3 flex flex-wrap gap-2 justify-center sm:justify-start">
               <span className="px-2 py-1 bg-emerald-500/20 text-emerald-500 text-xs font-bold rounded-md">KYC Verified</span>
-              <span className="px-2 py-1 bg-blue-500/20 text-blue-500 text-xs font-bold rounded-md">Mitra Active</span>
+              <span className="px-2 py-1 bg-blue-500/20 text-blue-500 text-xs font-bold rounded-md">Flint Active</span>
             </div>
           </div>
         </div>

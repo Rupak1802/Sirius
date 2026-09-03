@@ -57,7 +57,7 @@ export default function FinancialWeather() {
           <CloudRain size={48} className="text-blue-500 mb-6 opacity-80" />
           <h2 className="text-2xl font-bold text-[var(--text-color)] mb-2">Ready to forecast your week?</h2>
           <p className="text-[var(--text-muted)] mb-8 text-center">
-            Select the platforms you plan to work on this week. Mitra will analyze local demand and historical data.
+            Select the platforms you plan to work on this week. Flint will analyze local demand and historical data.
           </p>
           
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -88,7 +88,7 @@ export default function FinancialWeather() {
       {analyzing && (
         <div className="glass-card p-16 text-center flex flex-col items-center border-blue-500/30 bg-blue-500/5 max-w-2xl mx-auto">
           <Loader2 size={48} className="text-blue-500 animate-spin mb-6" />
-          <h2 className="text-2xl font-bold text-[var(--text-color)] mb-2">Mitra AI Analyzing...</h2>
+          <h2 className="text-2xl font-bold text-[var(--text-color)] mb-2">Flint AI Analyzing...</h2>
           <p className="text-[var(--text-muted)] animate-pulse">Comparing {selectedJobs.length} job roles, weather, and local events...</p>
         </div>
       )}
@@ -161,7 +161,7 @@ export default function FinancialWeather() {
           <div className="bg-amber-500/10 border border-amber-500/20 p-5 rounded-2xl flex gap-4 items-start mt-6 shadow-sm">
             <AlertTriangle className="text-amber-500 shrink-0 mt-0.5" />
             <div>
-              <h4 className="font-bold text-[var(--text-color)]">Mitra Suggestion</h4>
+              <h4 className="font-bold text-[var(--text-color)]">Flint Suggestion</h4>
               <p className="text-[var(--text-muted)] text-sm mt-1">
                 Wednesday shows low demand for Rapido. You might want to pick up an extra Construction shift instead to maintain your target income.
               </p>

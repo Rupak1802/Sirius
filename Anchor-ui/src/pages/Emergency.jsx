@@ -20,7 +20,7 @@ export default function Emergency() {
           <div>
             <h2 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-2">Buffer Critically Low</h2>
             <p className="text-red-700/80 dark:text-red-200/80 mb-6 max-w-xl leading-relaxed font-medium">
-              You are currently projected to miss rent by ₹1,200 next week. Mitra has automatically locked all flexible spending until this gap is closed.
+              You are currently projected to miss rent by ₹1,200 next week. Flint has automatically locked all flexible spending until this gap is closed.
             </p>
             
             <button className="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-xl shadow-[0_0_20px_rgba(220,38,38,0.3)] dark:shadow-[0_0_20px_rgba(220,38,38,0.5)] transition-all">
@@ -47,7 +47,7 @@ export default function Emergency() {
             <AlertCircle className="text-[var(--text-muted)]" />
             <h3 className="font-bold text-[var(--text-color)] text-lg">Report Accident/Issue</h3>
           </div>
-          <p className="text-[var(--text-muted)] mb-6 text-sm">Notify Mitra that you cannot work. We will pause your savings targets and recalculate your timeline.</p>
+          <p className="text-[var(--text-muted)] mb-6 text-sm">Notify Flint that you cannot work. We will pause your savings targets and recalculate your timeline.</p>
           <button className="w-full py-3 rounded-xl border border-[var(--card-border)] text-[var(--text-muted)] hover:text-[var(--text-color)] font-semibold hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
             Pause My Targets
           </button>

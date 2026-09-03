@@ -55,7 +55,7 @@ export default function WhatIf() {
             className="mt-8 bg-blue-600 hover:bg-blue-500 disabled:bg-blue-600/50 text-white font-bold py-3 px-8 rounded-xl shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all flex items-center gap-2 mx-auto"
           >
             {simulating ? <Loader2 className="animate-spin" size={20} /> : <Play size={20} />}
-            {simulating ? 'Mitra AI Simulating...' : 'Run Simulation'}
+            {simulating ? 'Flint AI Simulating...' : 'Run Simulation'}
           </button>
         </div>
 
@@ -80,7 +80,7 @@ export default function WhatIf() {
 
             <div className="flex items-center gap-2 mb-6 relative z-10">
               <Clock className="text-blue-400" size={24} />
-              <h3 className="font-bold text-2xl text-[var(--text-color)]">Mitra's Recovery Plan</h3>
+              <h3 className="font-bold text-2xl text-[var(--text-color)]">Flint's Recovery Plan</h3>
             </div>
             
             <div className="space-y-4 relative z-10">

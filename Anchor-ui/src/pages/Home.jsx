@@ -160,7 +160,7 @@ export default function Home() {
           
           <div>
             <div className="flex justify-between items-start mb-2 relative z-10">
-              <h3 className="text-xl font-bold text-[var(--text-color)]">Mitra's recommendation</h3>
+              <h3 className="text-xl font-bold text-[var(--text-color)]">Flint's recommendation</h3>
               <span className="bg-emerald-500 text-[var(--bg-color)] text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">New</span>
             </div>
             <p className="text-[var(--text-muted)] text-sm mb-4">Investment readiness score based on your surplus.</p>

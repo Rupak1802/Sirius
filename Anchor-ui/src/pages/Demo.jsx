@@ -34,7 +34,7 @@ export default function Demo() {
       <div>
         <h1 className="text-3xl font-bold tracking-tight mb-2">Live Demo</h1>
         <p className="text-[var(--text-color)]/70">
-          Stress-test the buffer in real time. Pull earnings down and watch ANCHOR move to protect funds.
+          Stress-test the buffer in real time. Pull earnings down and watch FLINT move to protect funds.
         </p>
       </div>
 
