@@ -31,7 +31,9 @@ export default function MainLayout() {
         <div className="p-6 border-b border-[var(--card-border)]">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg">M</div>
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden shadow-lg border border-[var(--card-border)] bg-white/50">
+                <img src="/FLint logo.png" alt="Flint Logo" className="w-full h-full object-contain" />
+              </div>
               <div>
                 <h1 className="font-bold text-xl tracking-wide">Flint</h1>
                 <p className="text-[10px] text-blue-500 font-bold tracking-widest uppercase">Co-Pilot</p>
@@ -79,7 +81,9 @@ export default function MainLayout() {
         {/* Mobile Header */}
         <header className="md:hidden glass-panel border-b border-[var(--card-border)] p-4 sticky top-0 z-20 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-white">M</div>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden shadow-sm border border-[var(--card-border)] bg-white/50">
+              <img src="/FLint logo.png" alt="Flint Logo" className="w-full h-full object-contain" />
+            </div>
             <h1 className="font-bold text-lg text-[var(--text-color)]">Flint</h1>
           </div>
           <div className="flex items-center gap-3">

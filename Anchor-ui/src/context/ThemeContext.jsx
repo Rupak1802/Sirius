@@ -3,8 +3,8 @@ import { createContext, useState, useContext, useEffect } from 'react';
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  // Default to dark glassmorphism
-  const [theme, setTheme] = useState('dark');
+  // Default to light theme
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     if (theme === 'dark') {
