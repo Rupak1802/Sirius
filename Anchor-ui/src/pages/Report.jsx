@@ -1,7 +1,6 @@
 import { useLanguage } from '../context/LanguageContext';
 import { mockData } from '../data/mockData';
 import { Download, ShieldCheck, HeartPulse, Activity } from 'lucide-react';
-import VoiceButton from '../components/ui/VoiceButton';
 
 export default function Report() {
   const { t } = useLanguage();
@@ -13,7 +12,7 @@ export default function Report() {
           <h1 className="text-3xl font-bold text-[var(--text-color)] tracking-tight">{t('report')}</h1>
           <p className="text-[var(--text-muted)] mt-1">Simple summary of your money this week.</p>
         </div>
-        <VoiceButton text="Your weekly report is ready. You are in a STABLE condition. You earned ₹5,620, protected your rent, and have 7 days of runway." />
+        
       </div>
 
       <div className="glass-card p-10 text-center border-blue-500/30 bg-blue-500/5 relative overflow-hidden shadow-[0_0_30px_rgba(59,130,246,0.1)]">

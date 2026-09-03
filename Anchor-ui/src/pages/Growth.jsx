@@ -1,7 +1,6 @@
 import { mockData } from '../data/mockData';
 import { useLanguage } from '../context/LanguageContext';
 import { TrendingUp, Award, Shield, ArrowRight } from 'lucide-react';
-import VoiceButton from '../components/ui/VoiceButton';
 
 export default function Growth() {
   const { t } = useLanguage();
@@ -21,7 +20,7 @@ export default function Growth() {
           <h1 className="text-3xl font-bold text-[var(--text-color)] tracking-tight">{t('growth')}</h1>
           <p className="text-[var(--text-muted)] mt-1">Invest your surplus automatically.</p>
         </div>
-        <VoiceButton text={isFragile ? "Growth is currently paused because your buffer is low. Protect your essentials first." : `You have a healthy surplus. You can safely invest ₹${recommendedWeekly} this week into Digital Gold.`} />
+        
       </div>
 
       {isFragile ? (

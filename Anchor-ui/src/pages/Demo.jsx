@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import GlassCard from '../components/ui/GlassCard';
-import VoiceButton from '../components/ui/VoiceButton';
+
 import { Activity, ShieldAlert, ShieldCheck, Shield } from 'lucide-react';
 
 export default function Demo() {
@@ -77,7 +77,7 @@ export default function Demo() {
               </div>
               <h2 className="text-3xl font-black tracking-widest">{state}</h2>
             </div>
-            <VoiceButton text={message} className="scale-90" />
+            
           </div>
           
           <div className="bg-black/30 p-4 rounded-xl border border-white/5 mt-4">

@@ -1,77 +1,95 @@
-import { Lightbulb, TrendingUp, BarChart2 } from 'lucide-react';
-import VoiceButton from '../components/ui/VoiceButton';
+import { useState } from 'react';
+import { Lightbulb, TrendingUp, AlertTriangle, ArrowRight, Shield } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { AreaChart, Area, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { mockData } from '../data/mockData';
 
 export default function Insights() {
+  const { t } = useLanguage();
+
+  const data = mockData.income.daily_history;
+
   return (
-    <div className="space-y-6 pb-20">
-      <div className="flex justify-between items-end mb-8">
-        <div>
-          <h1 className="text-3xl font-bold text-[var(--text-color)] tracking-tight">AI Insights</h1>
-          <p className="text-slate-400 mt-1">Mitra analyzes your earnings to find hidden opportunities.</p>
-        </div>
-        <VoiceButton text="Insight. Working Friday evenings on Swiggy yields 30% more profit than Sunday mornings." />
+    <div className="space-y-6 pb-20 max-w-5xl mx-auto">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-[var(--text-color)] tracking-tight">{t('insights')}</h1>
+        <p className="text-[var(--text-muted)] mt-1">Deep analysis of your financial behavior.</p>
       </div>
 
-      <div className="glass-card p-6 md:p-8 border-purple-500/30 bg-purple-900/10 relative overflow-hidden shadow-[0_0_30px_rgba(168,85,247,0.15)]">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full mix-blend-screen filter blur-[80px] translate-x-1/2 -translate-y-1/2"></div>
-        
+      {/* Hero Graph Widget */}
+      <div className="glass-card p-6 md:p-8 border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-transparent relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full filter blur-[80px] translate-x-1/2 -translate-y-1/2"></div>
         <div className="flex items-center gap-3 mb-6 relative z-10">
-          <div className="p-3 bg-purple-500/20 text-purple-400 rounded-xl border border-purple-500/30">
-            <Lightbulb size={28} className="drop-shadow-[0_0_15px_rgba(168,85,247,0.8)]" />
+          <div className="p-2.5 bg-blue-500/20 text-blue-500 rounded-xl border border-blue-500/30">
+            <TrendingUp size={24} />
           </div>
-          <h2 className="text-2xl font-bold text-[var(--text-color)]">Top Discovery</h2>
+          <div>
+            <h2 className="text-xl font-bold text-[var(--text-color)]">Weekly Velocity</h2>
+            <p className="text-sm text-[var(--text-muted)]">Your earning speed vs. spending speed</p>
+          </div>
         </div>
         
-        <p className="text-xl text-purple-100/90 font-medium leading-relaxed mb-6 relative z-10">
-          You are currently averaging <span className="text-[var(--text-color)] font-bold bg-purple-500/20 px-2 py-0.5 rounded">₹120/hr</span> on Zomato during weekday lunches, but your historical data shows you made <span className="text-[var(--text-color)] font-bold bg-emerald-500/20 px-2 py-0.5 rounded text-emerald-400">₹180/hr</span> doing grocery delivery (Instamart) during the same time slot last month.
-        </p>
+        <div className="h-64 w-full relative z-10">
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={data}>
+              <defs>
+                <linearGradient id="colorIncome" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.8}/>
+                  <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}/>
+                </linearGradient>
+              </defs>
+              <XAxis dataKey="day" stroke="var(--text-color)" tick={{fill: 'var(--text-color)'}} tickLine={false} axisLine={false} />
+              <Tooltip contentStyle={{ backgroundColor: 'var(--card-bg)', border: '1px solid var(--card-border)', borderRadius: '10px', color: 'var(--text-color)' }} />
+              <Area type="monotone" dataKey="amount" stroke="#3b82f6" fillOpacity={1} fill="url(#colorIncome)" />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
         
-        <button className="bg-purple-600 hover:bg-purple-500 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] relative z-10">
-          Prioritize Grocery This Week
-        </button>
+        <div className="mt-6 flex flex-col md:flex-row gap-4 relative z-10">
+          <div className="flex-1 bg-black/10 dark:bg-white/5 p-4 rounded-xl border border-[var(--card-border)]">
+            <p className="text-sm text-[var(--text-muted)] font-bold uppercase tracking-wider mb-1">Observation</p>
+            <p className="text-[var(--text-color)] text-sm">Your earning velocity peaks on weekends, but your expenses peak on Wednesdays due to bulk grocery purchases. Spreading grocery runs could improve mid-week cash flow.</p>
+          </div>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-        <div className="glass-card p-6 border-white/5">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="font-bold text-[var(--text-color)] text-lg flex items-center gap-2">
-              <TrendingUp className="text-emerald-400" /> Income Velocity
-            </h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Recommendation Widget */}
+        <div className="glass-card p-6 border-emerald-500/30 bg-emerald-500/5 relative overflow-hidden">
+          <div className="flex items-center gap-3 mb-4">
+            <Lightbulb className="text-emerald-500" size={24} />
+            <h3 className="font-bold text-lg text-[var(--text-color)]">Actionable Strategy</h3>
           </div>
-          
-          <div className="flex items-end h-32 gap-3 mb-4">
-            {/* Simple sparkline visualization */}
-            {[20, 35, 25, 45, 60, 40, 85, 70, 95].map((val, i) => (
-              <div key={i} className="flex-1 bg-white/5 rounded-t-sm relative group cursor-pointer" style={{ height: `${val}%` }}>
-                <div className="absolute inset-0 bg-emerald-500/50 rounded-t-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-            ))}
+          <p className="text-[var(--text-color)] mb-6 text-lg leading-relaxed">
+            Switch entirely to <span className="font-bold text-emerald-500">Swiggy Delivery</span> this Saturday evening. 
+            Rain is forecasted, meaning surge pricing will be active. 
+          </p>
+          <div className="p-4 bg-emerald-500/20 border border-emerald-500/30 rounded-xl mb-6">
+            <span className="block text-sm text-[var(--text-muted)] font-medium mb-1">Expected Earnings Boost</span>
+            <span className="text-2xl font-black text-emerald-500">+ ₹450 / shift</span>
           </div>
-          
-          <p className="text-slate-400 text-sm">Your earning speed is accelerating. You made your first ₹1,000 this week 4 hours faster than last week.</p>
+          <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-[var(--bg-color)] py-3 rounded-xl font-bold transition-all shadow-md flex items-center justify-center gap-2">
+            Add to Schedule <ArrowRight size={18} />
+          </button>
         </div>
 
-        <div className="glass-card p-6 border-white/5">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="font-bold text-[var(--text-color)] text-lg flex items-center gap-2">
-              <BarChart2 className="text-blue-400" /> Expense Leaks
-            </h3>
+        {/* Risk Alert Widget */}
+        <div className="glass-card p-6 border-amber-500/30 bg-amber-500/5 relative overflow-hidden">
+          <div className="flex items-center gap-3 mb-4">
+            <AlertTriangle className="text-amber-500" size={24} />
+            <h3 className="font-bold text-lg text-[var(--text-color)]">Risk Factor Detected</h3>
           </div>
-          
-          <div className="space-y-4">
-            <div className="flex items-center justify-between bg-black/20 p-4 rounded-xl border border-white/5">
-              <div>
-                <p className="text-[var(--text-color)] font-medium">Idle Fuel Burn</p>
-                <p className="text-slate-400 text-xs mt-1">Waiting between orders</p>
-              </div>
-              <p className="text-red-400 font-bold">-₹140</p>
+          <p className="text-[var(--text-color)] mb-6 text-lg leading-relaxed">
+            Your fuel expenses are consuming <span className="font-bold text-red-400">18%</span> of your total gross income, which is 5% higher than the city average.
+          </p>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-start gap-3 bg-black/10 dark:bg-white/5 p-3 rounded-xl">
+              <Shield className="text-blue-500 shrink-0 mt-0.5" size={18} />
+              <p className="text-sm text-[var(--text-muted)]"><strong className="text-[var(--text-color)]">Mitra Fix:</strong> Optimize your delivery routes. We recommend rejecting orders over 8km unless surge is active.</p>
             </div>
-            <div className="flex items-center justify-between bg-black/20 p-4 rounded-xl border border-white/5">
-              <div>
-                <p className="text-[var(--text-color)] font-medium">Bank Transfer Fees</p>
-                <p className="text-slate-400 text-xs mt-1">Instant withdrawal costs</p>
-              </div>
-              <p className="text-red-400 font-bold">-₹45</p>
+            <div className="flex items-start gap-3 bg-black/10 dark:bg-white/5 p-3 rounded-xl">
+              <Shield className="text-blue-500 shrink-0 mt-0.5" size={18} />
+              <p className="text-sm text-[var(--text-muted)]"><strong className="text-[var(--text-color)]">Mitra Fix:</strong> Check tire pressure weekly; poor pressure reduces mileage by up to 10%.</p>
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import GlassCard from '../components/ui/GlassCard';
-import VoiceButton from '../components/ui/VoiceButton';
 import { ShieldCheck, Lock, Car, Home } from 'lucide-react';
 
 export default function Dashboard() {
@@ -7,7 +6,7 @@ export default function Dashboard() {
     <div className="space-y-6 max-w-4xl mx-auto">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold tracking-tight">Buffer Status</h1>
-        <VoiceButton text="You are safe for 12 days. Good time to save extra." />
+        
       </div>
       
       <GlassCard className="border-green-500/30 bg-green-900/10 shadow-[0_0_30px_rgba(34,197,94,0.1)]">
